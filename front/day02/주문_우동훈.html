@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main {
+            border: 2px solid gray;
+            width: 600px;
+            margin: auto;
+            padding: 80px;
+            border-radius: 10px;
+        }
+        .img {
+            background-image: url("https://cdn.mkhealth.co.kr/news/photo/202101/51814_52449_332.jpg");
+            background-size: cover;
+            height: 500px;
+        }
+
+        .announce { margin-top: 80px; }
+        .order { margin-top: 50px; }
+        .order p { margin-bottom: 0px; }
+        
+        .order input {
+            width: 97%;
+            padding: 8px;
+        }
+        .order select {
+            width: 100%;
+            padding: 10px
+        }
+        button {
+            width: 100%;
+            margin-top: 30px;
+            height: 80px;
+            background-color: beige;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="img"></div>
+        <div class="announce">
+            <h2>대관령 황태</h2>
+            <p>겨울내내 녹았다 얼었다를 반복한 맛 좋은 황태입니다.</p>
+            <p>가격: 30000원/10마리</p>
+        </div>
+        <div class="order">
+            <h3>--주문내역--</h3>
+            <p>주문자 이름</p>
+            <input type="text">
+            <p>수량</p>
+            <select name="" id="">
+                <option value="">수량을 선택하세요</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+            <p>주문금액</p>
+            <input type="text">
+            <p>전화번호</p>
+            <input type="text">
+        </div>
+        <button>주문하기</button>
+    </div>
+</body>
+</html>
