@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkId(){
+            const login = document.frm;
+            const userId = login.userId;
+            const userPw = login.userPw;
+
+            if( userId.value === ""){
+                alert("아이디를 입력해주세요");
+                userId.focus();
+            } else if (userPw.value === ""){
+                alert("비밀번호를 입력해주세요");
+                userPw.focus();
+            }else {
+                alert("로그인 성공")
+                userId.value = null;
+                userPw.value = null;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>로그인 유효성 검증</h2>
+    <form name="frm" action="" method="get">
+        <input type="text" name="userId" id="id">
+        <input type="password" name="userPw" id="pw">
+        <button type="button" onclick="checkId()" id="btn">로그인</button>
+    </form>
+</body>
+</html>

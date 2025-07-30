@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+        function lotto(x,y){
+
+            let lottoYear = new Array(12);
+
+
+            for(i=0; i<12; i++){
+                lottoYear[i] = new Array(4);
+                    for(j=0; j<4; j++){
+                        lottoYear[i][j] = new Array(6);
+                    }
+                }
+
+                for(k=0; k<12; k++) {
+                    for(i=0; i<4; i++){
+                        for(j=0; j<6; j++){
+                            lottoYear[k][i][j] = Math.floor(Math.random()*45+1);
+                        }
+                    }
+                }
+                
+                return lottoYear[x-1][y-1];
+            }
+
+
+        // 7월 2주차 로또 번호 
+        console.log(lotto(7,2))
+
+
+    </script>
+</body>
+</html>

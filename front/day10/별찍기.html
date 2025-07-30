@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        let num = parseInt(prompt("별을 몆개 찍을까요?"));
+        let text = document.getElementById("result");
+        let starArry = new Array(num);
+
+        function star(a) {
+            for(i=0;i<a;i++){
+                starArry[i] = "*";
+            }
+            return starArry.join('')
+        }
+        text.innerHTML = star(num);
+    </script>
+</body>
+</html>

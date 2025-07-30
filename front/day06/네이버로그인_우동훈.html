@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/releases/v6.7.2/js/all.js"></script>
+    <title>Document</title>
+    <style>
+        .main {
+            width: 1275px;
+            margin: auto;
+        }
+        .icon {
+            display: flex;
+        }
+
+        .icon ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .icon ul:nth-child(2) {
+            margin-left: 950px;
+        }
+
+        .icon ul li {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .search {
+            text-align: center;
+        }
+
+        .searchbar {
+            position: relative;
+        }
+
+        .searchbar input {
+            width: 500px;
+            height: 60px;
+            border-radius: 100px;
+            border-color: green;
+            padding : 0 70px;
+            font-size: 25px;
+        }
+
+        .searchbar img {
+            position: absolute;
+            width: 35px;
+            left: 340px;
+            top: 14px;
+            cursor: pointer;
+        }
+        .keyboard{
+            position: absolute;
+            left: 840px;
+            top: 15px;
+            cursor: pointer;
+        }
+        .searchicon{
+            position: absolute;
+            left: 900px;
+            top: 15px;
+            cursor: pointer;
+        }
+        .menu {
+            text-align: center;
+        }
+        .menu ul {
+            display: flex;
+            list-style: none;
+            margin-left: 280px;
+            padding-top: 0px;
+        }
+        .menu ul li{
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        .menu ul li img:hover {
+            box-shadow: 0px 0px 5px #444
+        }
+        .menu ul li img {
+            width: 30px;
+            border: 1px solid gainsboro;
+            padding: 5px;
+            border-radius: 15px;
+        }
+
+        .menu ul li p {
+            margin-top: 0px;
+        }  
+        .info {
+            margin-top: 30px;
+            display: flex;
+        }
+        .info1 {
+            width: 800px;
+            border-radius: 10px;
+        }
+        .info1 .ad1 img {
+            width: 800px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .info1 .news {
+            margin-top: 20px;
+            width: 800px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .info1 .news .title{}
+        .info1 .news .title ul{
+            display: flex;
+            list-style: none;
+            margin-left: -25px;
+        }
+        .info1 .news .title ul li:first-child{
+            margin-left: 0px;
+            color: black;
+            font-weight: 700;
+        }
+        .info1 .news .title ul li{
+            margin-left: 20px;
+            color: gray;
+            cursor: pointer;
+        }
+        .info1 .news .title ul li:hover {
+            text-decoration: underline;
+        }
+        .info1 .news .title ul li span {
+            width: 100px;
+            color: white;
+            background-color: red;
+            border-radius: 10px;
+            padding: 3px 3px;
+            margin-left: 5px;
+        }
+        .info1 .news .notice{
+            border: 1px solid whitesmoke;
+            width: 96%;
+            margin: auto;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            
+        }
+        .info1 .news .notice ul{
+            list-style: none;
+            display: flex;
+            margin-left: -20px;
+        }
+        .info1 .news .notice ul li{
+            margin-right: 30px;
+            cursor: pointer;
+        }
+        .info .news .notice ul li:hover {
+            text-decoration: underline
+        }
+        .info1 .news .notice ul li select{
+            border: none;
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+        .info1 .news .notice ul li select:hover {
+            text-decoration: underline;
+        }
+        .info1 .news .notice{}
+
+        .info1 .news .broad{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            margin-left: 5px;
+            margin-bottom: 20px;
+        }
+        .info1 .news .broad img{
+            width: 75px;
+        }
+        .info1 .news .broad div {
+            width: 130px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid whitesmoke;
+            cursor: pointer;
+        }
+        .info1 .news .broad div:hover {
+            border: 1px solid black;
+        }
+        .info1 .news .etc{
+            position: relative;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .info1 .news .etc button {
+            position: absolute;
+            background-color: white;
+            border-radius: 100px;
+            padding: 15px 20px;
+            cursor: pointer;
+        }
+        .info1 .news .etc button:hover {
+            box-shadow: 0px 0px 5px #444
+        }
+        .info1 .news .etc p {
+            margin-top: 50px;
+            font-weight: 500;
+        }
+        .info1 .news .etc p span {
+            color: blue;
+
+        }
+        .left {
+            top: -10px;
+            left: 250px;
+        }
+        .right {
+            top: -10px;
+            left: 500px;
+        }
+        .info2 {
+            width: 500px;
+            margin-left: 40px;
+        }
+        .info2 .login {
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .info2 .login p{}
+        .info2 .login button{
+            padding: 20px 110px;
+            border-radius: 10px;
+            background-color: #00ff04;
+            border: none;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .info2 .login button:hover {
+            background-color: green;
+        }
+        .info2 .login button span{
+            font-weight: 700;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .info2 .login ul{
+            list-style: none;
+            display: flex;
+        }
+        .info2 .login ul li{
+            cursor: pointer;
+            margin-left: 30px;
+        }
+        .info2 .login ul li:hover {
+            text-decoration: underline;
+        }
+        .info2 .ad2 {
+            height: 600px;
+            background-image: url("https://cdn.ardentnews.co.kr/news/photo/202502/5492_25585_2650.jpg");
+            background-size: cover;
+            border-radius: 10px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="icon">
+            <ul>
+                <li><i class="fa-solid fa-bars fa-2x"></i></li>
+                <li><i class="fa-brands fa-paypal fa-2x"></i></li>
+            </ul>
+            <ul>
+                <li><i class="fa-regular fa-comment-dots fa-2x"></i></li>
+                <li><i class="fa-regular fa-bell fa-2x"></i></li>
+                <li><i class="fa-solid fa-cart-shopping fa-2x"></i></li>
+            </ul>
+        </div>
+        <div class="search">
+            <div class="searchbar">
+                <img src="https://blog.kakaocdn.net/dna/l0xly/btscZVMt3EF/AAAAAAAAAAAAAAAAAAAAAMFEPalDWoKIkO6ynBn_mOVYHAHHT7dQNdRt7AJhX525/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1753973999&allow_ip=&allow_referer=&signature=%2FZFS7JbFo58IY8FU2CjRWh98ihI%3D" alt="">
+                <div class="keyboard"><i class="fa-solid fa-keyboard fa-2x"></i></div>
+                <div class="searchicon"><i class="fa-solid fa-magnifying-glass fa-2x" style="color: #00ff04;"></i></div>
+                <input type="text">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <img src="https://src.wizad.co.kr/wizbbs/data/shopimg/A1670303927277_20221206_141822.jpg" alt="">
+                        <p>메일</p>
+                    </li>
+                    <li>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQArnasD_mVGqOTjRlcoqTOdZGBSYkoow2QSw&s" alt="">
+                        <p>카페</p>
+                    </li>
+                    <li>
+                        <img src="https://i.namu.wiki/i/QWVJJqQ2U_KE1A1BkDI5WwhFcIeQ4C9uGIgibUWPHr3ev65fv4JW9_Yd-66EVu_0TF8mMXIh9k_dnrv_DlLBCw.svg" alt="">
+                        <p>블로그</p>
+                    </li>
+                    <li>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVy_JZeW5-N1LFNBEwRtkQtCrmpR-EV7vobw&s" alt="">
+                        <p>스토어</p>
+                    </li>
+                    <li>
+                        <img src="https://cdn-1.webcatalog.io/catalog/naver-news/naver-news-icon.png?v=1714775233138" alt="">
+                        <p>뉴스</p>
+                    </li>
+                    <li>
+                        <img src="https://i.namu.wiki/i/yCiJPqtJkv8F7fku9Pdh4gxpn9QBgoAzWLIQuNxitgYUxAhlUt0nPnPPIgbH7YSffA7buP4KB1q_WhWlowxssA.webp" alt="">
+                        <p>증권</p>
+                    </li>
+                    <li>
+                        <img src="https://i.namu.wiki/i/IxqRYX1tFrrGrQbuDauqC0flne6-80P6BiOgLmMAVI1sJZdsd2zhCsqaoD5STqB7V9jUUc1GSM0u9QA15tN90w.svg" alt="">
+                        <p>부동산</p>
+                    </li>
+                    <li>
+                        <img src="https://i.namu.wiki/i/g1ObOjgHeGx6qsTX-DgwrwyHL8uHBhXxiPQTCu9w5M32o0po4v1ugu_ikoEIncrVO-kq3Q73lCs8MzRgH55G2A.webp" alt="">
+                        <p>지도</p>
+                    </li>
+                    <li>
+                        <img src="https://i.namu.wiki/i/ugTlJol27avmPIWdkWY3fk18VR1J7BPr_AwwIKaF8fu2v9VW2Bmto6jQungo__wBfkhNMOGMDfemB_D1nctdyw.svg" alt="">
+                        <p>웹툰</p>
+                    </li>
+                    <li>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzWpGvZqLS9q-8IuKaZx3RqiFTILWl3kQN2Q&s" alt="">
+                        <p>치지직</p>
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/128/6941/6941941.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="info">
+            <div class="info1">
+                <div class="ad1">
+                    <img src="https://img.freepik.com/free-vector/autumn-park-metal-fence-road-with-sidewalk_107791-16058.jpg?semt=ais_hybrid&w=740" alt="">
+                </div>
+                <div class="news">
+                    <div class="title">
+                        <ul>
+                            <li>뉴스스탠드</li>
+                            <li>언론사편집</li>
+                            <li>엔터</li>
+                            <li>스포츠 <span><i class="fa-solid fa-wifi" style="color: #ffffff;"></i>LIVE</span></li>
+                            <li>경제</li>
+                            <li>쇼핑투데이</li>
+                        </ul>
+                    </div>
+                    <div class="notice">
+                        <ul>
+                            <li>
+                                <select name="" id="">
+                                    <option value="">전체언론사</option>
+                                </select>
+                            </li>
+                            <li style="width: 420px;">내용내용내용내용내용내용내용내용내용</li>
+                            <li>뉴스 스탠드</li>
+                            <li>뉴스 홈</li>
+                        </ul>
+                    </div>
+                    <div class="broad">
+                        <div><img src="https://cdn.mediatoday.co.kr/news/photo/201404/116318_128954_5917.png" alt=""></div>
+                        <div><img src="https://www.edaily.co.kr/profile_edaily_512.png" alt=""></div>
+                        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUdtw5AVJ23eggUH-6Y5Oqyvfb3RNkzhBewQ&s" alt=""></div>
+                        <div><img src="https://news.kbs.co.kr/data/news/2022/07/01/20220701_UPgmsH.jpg" alt=""></div>
+                        <div><img src="https://i.namu.wiki/i/SnP23ZE76dtwu9_VBmGJKCusJHlsSx7hdgDXxE2GmuEzfQCu_qiWxUZ1ieDTdbR2Y61q2hBgpoombzdJ4F8xLw.svg" alt=""></div>
+                        <div><img src="https://i.namu.wiki/i/Va4UoPd3NCG8ce4B9KV9Daw1krf3ZVN2A2TavX7qcY2kmXwrsDExq1AjwlVXBUgqd6R1UfnXBRf0gHKz5VtYlw.svg" alt=""></div>
+                        <div><img src="https://i.namu.wiki/i/EkDV-r-spvEVou_maQ-a6mctu9Z7RYIUrsTacs5oIOUg3nNGo90A7W-Hcn9kNvl-1EAjpfAyZzXJ9hVudgRigg.webp" alt=""></div>
+                        <div><img src="https://blog.kakaocdn.net/dna/RNbWs/btqw3PsQbkA/AAAAAAAAAAAAAAAAAAAAAOeumtiY1HY8p-2h3DxkW9VfaK2ojDwohpZrKeuxVxKJ/img.jpg?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1753973999&allow_ip=&allow_referer=&signature=3BsE3nbBkUocUjguVrucBCfi5Bc%3D" alt=""></div>
+                        <div><img src="https://i.namu.wiki/i/GKxISNytwqDIGmHsWzupevfvdqyQRV7F8s2Ei_NoBXQVDAdRwcPtniMNoe9HEzFUFTyYxH-82J8edxSjhrGeAA.webp" alt=""></div>
+                        <div><img src="https://img6.yna.co.kr/photo/cms/2017/01/02/01/C0A8CAE2000001595E122FC600000468_P2.jpg" alt=""></div>
+                        <div><img src="https://menu.mt.co.kr/new_navi/mtlogo223x223.gif" alt=""></div>
+                        <div><img src="https://i.namu.wiki/i/6J52IO4KnrlxyXTdjf6ITz2QtY0ZJk_5qRqsOlAQaT3AKbHrTqtMXjpzmeazy-nfLf7j8ASyswsedH5NGmWSjw.svg" alt=""></div>
+                        <div><img src="https://i.namu.wiki/i/HD3tpcjXMvlRZnkbYBxYrMvCTv-tg2LgZZ46ZUfz8-AsbyWflio0fKTLEKgabS24Xy7Oo69zS-B9xQtpGYpg6Q.svg" alt=""></div>
+                        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc0x-LxBCTak14MVpypUv1r_iJTB3PRMkSfA&s" alt=""></div>
+                        <div><img src="https://i.namu.wiki/i/7fD8_TzSN9JtMGtQlyGTj9GYFhOXlIPZRLgw7hL7CwwROJnPFjLgJwnLEL1LMr3D1BJscNJAtC0E-8c-4ZbcvA.svg" alt=""></div>
+                        <div><img src="https://www.koreatimes.co.kr/images/og.png" alt=""></div>
+                        <div><img src="https://wiki1.kr/images/thumb/7/73/%ED%94%84%EB%9D%BC%EC%9E%84%EA%B2%BD%EC%A0%9C%EC%8B%A0%EB%AC%B8%E3%88%9C_%EA%B8%80%EC%9E%90.png/300px-%ED%94%84%EB%9D%BC%EC%9E%84%EA%B2%BD%EC%A0%9C%EC%8B%A0%EB%AC%B8%E3%88%9C_%EA%B8%80%EC%9E%90.png" alt=""></div>
+                        <div><img src="https://d2u3dcdbebyaiu.cloudfront.net/img/companyPage_kr/logo_9657.jpg" alt=""></div>
+                        <div><img src="https://www.worklaw.co.kr/ja_data/worklaw/images/new/worklaw_logo_2022.svg" alt=""></div>
+                        <div><img src="https://economist.co.kr/img/logo/economist_h0.png" alt=""></div>
+                        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXsXtvP0akZfUt19_qOKFYj39Ur3BULJF7UQ&s" alt=""></div>
+                        <div><img src="https://p.snmnews.com/image/logo/snslogo_20180314011617.png" alt=""></div>
+                        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeSuUhshl98TlqK73wqqDjgO4-J_O_2s1VoA&s" alt=""></div>
+                        <div><img src="https://cdn.emetro.co.kr/data1/resources/pc/images/etc/metro_logo.png" alt=""></div>
+                    </div>
+                    <div class="etc">
+                        <p><span>언론사</span> 더보기 2/4</p>
+                        <button class="left"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="right"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="info2">
+                <div class="login">
+                    <p>네이버를 더 안전하고 편리하게 사용하세요</p>
+                    <button><span>NAVER</span> 로그인</button>
+                    <ul>
+                        <li>아이디 찾기</li>
+                        <li>비밀번호 찾기</li>
+                        <li>회원가입</li>
+                    </ul>
+                </div>
+                <div class="ad2">
+                    
+                </div>
+                <div class="ad3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

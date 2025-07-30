@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcAmount() {
+            let price = document.querySelectorAll(".price");
+            const order = document.getElementById("result")
+            let result = 0;
+
+            price.forEach(item => { result += parseInt(item.innerHTML) })
+
+            order.innerHTML = "합계금액 :" + result;
+        }
+    </script>
+</head>
+<body>
+    <div class="price">50</div>
+    <div class="price">100</div>
+    <div class="price">150</div>
+    <div class="price">200</div>
+    <div class="price">250</div>
+    <div id="result">합계금액 : </div>
+
+    <button onclick="calcAmount()">계산하기</button>
+</body>
+</html>

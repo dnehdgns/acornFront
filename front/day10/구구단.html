@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="result"></div>
+    <script>
+        let dan = parseInt(prompt("몆단을 출력할까요?"))
+        let text = document.getElementById("result")
+        let txtArray = new Array(9)
+        
+        for(i=1;i<=9;i++){
+            let result = dan*i;
+            txtArray[i-1] = dan + "x" + i + "=" + result + "<br>";
+        }
+
+        text.innerHTML = txtArray.join('');
+    </script>
+</body>
+</html>

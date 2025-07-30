@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function 인사하기(k,name){
+            return name + k
+        }
+        function formatK(){
+            return "안녕"
+        }
+        function formatE(){
+            return "잘가"
+        }
+
+        인사하기(formatK, "주연")
+        인사하기(formatE, "주연")
+
+        const score = [70,80,100];
+
+        score.forEach(item => {
+            console.log(item);
+        })
+
+        const testMap = score.map((item) => item * 2)
+        console.log(testMap)
+
+        let arr = [];
+
+        arr.push(10);
+        arr.push(20);
+        console.log(arr);
+        console.log(arr.pop())
+    </script>
+</body>
+</html>

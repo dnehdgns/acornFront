@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function showMember(){
+            const member = document.querySelector(".member")
+            const nonMember = document.querySelector(".non-member")
+            member.classList.add("active")
+            nonMember.classList.remove("active")
+        }
+        function showNonMember(){
+            const member = document.querySelector(".member")
+            const nonMember = document.querySelector(".non-member")
+            member.classList.remove("active")
+            nonMember.classList.add("active")
+        }
+
+    </script>
+    <style>
+        .wrap {
+            width: 400px;
+            margin: auto;
+            border: 1px solid black;
+        }
+        .tap-menu {
+            display: flex;
+        }
+        .tap-menu > div {
+            border: 1px solid black;
+            width: 50%;
+            text-align: center;
+        }
+
+        .member , .non-member{
+            border: 1px solid black;
+            height: 200px;
+            text-align: center;
+            display: none;
+        }
+
+        .member.active {
+            display: block;
+        }
+        .non-member.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="tap-menu">
+            <div onclick=showMember() style="cursor: pointer;">회원</div>
+            <div onclick=showNonMember() style="cursor: pointer;">비회원</div>
+        </div>
+
+        <div class="member active">
+            회원화면
+        </div>
+
+        <div class="non-member">
+            비회원화면
+        </div>
+    </div>
+</body>
+</html>

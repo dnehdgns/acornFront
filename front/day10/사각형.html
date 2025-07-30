@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="result"></div>
+    <script>
+        let num1 = parseInt(prompt("세로의 길이를 입력해주세요"));
+        let num2 = parseInt(prompt("가로의 길이를 입력해주세요"));
+
+        function square(a,b){
+            let result = a*b;
+            return result
+        }
+
+        let text = document.getElementById("result");
+        text.innerHTML = "사각형의 넓이는" + square(num1,num2) + "입니다."
+    </script>
+</body>
+</html>

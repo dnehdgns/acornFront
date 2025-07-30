@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        
+       
+        .potato{
+            width: 1360px;
+            height: 45px;
+            /*border: 1px solid black;*/
+            margin: 0 auto;
+            margin-top: 20px;
+           
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            
+            padding: 0;
+            margin: 0;
+        }
+
+        .po-img img {
+            width: 40px;
+            height: 40px;
+        }
+
+        li {
+            font-size: 30px;
+            line-height: 20px; 
+            margin-left: 5px;  
+        }
+        .po-font{
+            margin: 8px;
+            font-family: "Nanum Pen Script", cursive;
+        }
+
+        /*큰 박스*/
+        .wrap{
+            width: 1200px;
+           
+            border-radius: 20px;
+            /*border: 1px solid black;*/
+            margin: 0 auto;
+            margin-top: 100px;
+            background-color: rgb(197, 152, 94);
+            
+            
+        }
+        /*검색박스*/
+        .wrap .search-box{
+            width: 850px;
+            /*height: 100px;*/
+            margin: 0 auto;  
+            /*border: 1px solid black;*/
+
+            margin-top: 60px;
+            
+
+            display: flex;
+            position: relative;
+        }
+        li .position-btn{
+            border-radius: 30px;
+            background-color: black;
+            color: white;
+            width: 115px;
+            height: 45px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+   
+        li .position-btn:hover{
+            background-color: rgb(163, 158, 158);
+        }
+        
+        .hidden{
+            width: 100px;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid black;
+            
+            position: absolute;
+            left: 0px;
+            top: 45px;
+            display: none;
+        }
+        .hidden li{
+            font-size: 10px;
+            margin-bottom: 5px;
+        }
+        .search-box:hover  .hidden{
+            display: block;
+        }
+        
+        
+
+        /*검색바*/
+        .search-bar{
+            display: flex;
+        }
+
+         .seac{
+            width: 600px;
+            
+            border-radius: 30px;
+            font-size: 20px;
+            padding: 10px;
+
+            
+        }
+        .search-btn{
+            border-radius: 50px;
+            width: 45px;
+            height: 45px;
+            background-color: black;
+            color: white;
+            font-size: 30px;
+        }
+        
+        /*검색바 아래영역>*/
+        .sub-search{
+            width: 580px;
+            height: 30px;
+            /*border: 1px solid black;*/
+            margin: 0 auto;
+            
+          
+        }
+        .sub-search li{
+            font-size: 9px;
+        }
+        .sub-search .sub{
+            border: none;
+            background-color: rgb(197, 152, 94);
+            cursor: pointer;
+        }
+        li p{
+            font-size: 15px;
+           margin: 2px 2px 2px 2px;
+           font-weight: bold;
+        }
+
+        /*키워드 영역*/
+        .keyword{
+            width: 1000px;
+            height: 150px;
+            /*border: 1px solid black;*/
+            margin: 0 auto;
+            margin-top: 100px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; 
+            justify-content: center;  
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .key-box{
+            width: 100px;
+            height: 100px;
+           /* border: 1px solid black;*/
+            border-radius: 15px;
+            background-color: rgb(240, 234, 234);
+            font-weight: bold;
+            cursor: pointer;
+    
+        }
+        .key-box:hover{
+            background-color: rgb(204, 114, 72);
+        }
+       .position-btn:hover{
+            background-color: rgb(163, 118, 81);
+            
+       }
+       /*추천상품 영역*/
+       .abox-name{
+        width: 1000px;
+        
+        /*border: 1px solid black;*/
+        margin: 0 auto;
+        margin-top: 80px;
+       
+       }
+       .abox-name h2{
+        margin-top: 50px;
+       }
+       .abox{
+        width: 1000px;
+        height: 400px;
+        /*border: 1px solid black;*/
+        margin: 0 auto;
+        margin-top: 40px;
+
+        display: flex;
+        justify-content: center;
+        gap:13px;
+       }
+       .a{
+        width: 180px;
+        height: 230px;
+        border: 1.5px solid black;
+        border-radius: 6px;
+        background-color: rgb(163, 118, 81);
+        color: white;
+        font-weight: bold;
+        
+       }
+       .a img{
+        width: 180px;
+        height: 180px;
+       }
+
+       /*푸터 영역*/
+       .poo{
+        width: 1500px;
+        height: 500px;
+        /*border: 1px solid black;*/
+        margin: 0 auto;
+        margin-top: 30px;
+        display: flex;
+        
+       }
+       .poo-a{
+        width: 700px;
+        height: 500px;
+        /*border: 1px solid black;*/
+        list-style: none;
+        display: flex;
+        
+       }
+       .poo-b{
+        width: 200px;
+        height: 500px;
+        
+        /*border: 1px solid black;*/
+       }
+    </style>    
+   
+</head>
+<body>
+    <div class="potato">
+        <ul>
+            <li class="po-img"><img src="https://media.istockphoto.com/id/1189117812/ko/%EB%B2%A1%ED%84%B0/%EB%A7%8C%ED%99%94-%EC%8A%A4%ED%83%80%EC%9D%BC%EC%9D%98-%EC%9E%AC%EB%AF%B8%EC%9E%88%EB%8A%94-%EA%B0%90%EC%9E%90%EC%9D%98-%EB%B2%A1%ED%84%B0-%EA%B7%B8%EB%A6%BC.jpg?s=612x612&w=0&k=20&c=n0AcE6mCnke3uVuLtrJj1SRTFvB4jADDfV9RIWFfp5w="></li>
+            <li  class="po-font">감자마켓</li>
+        </ul>
+    </div>
+    <hr>
+    <!--큰 틀-->
+    <div class="wrap">
+        <!--검색바-->
+        <div class="search-box">
+            <ul>
+                <li><button class="position-btn">위치▽</button></li>
+                <li><ul class="hidden">
+                    <li><input type="checkbox">동교동</li>
+                    <li><input type="checkbox">서교동</li>
+                    <li><input type="checkbox">연남동</li>
+                    <li><input type="checkbox">연희동</li>
+                    <li><input type="checkbox">합정동</li>
+                </ul></li>
+           
+                <li class="search-bar">
+                    <ul>
+                        <li><input type="text" class="seac"></li>
+                        <li><button class="search-btn">></button></li>
+                    </ul>
+                </li>
+            </ul>
+    
+        </div>
+    
+
+    <!--인기검색어-->
+    <div class="sub-search">
+        <ul>
+            <li><p>인기검색어<p></p></li>
+            <li><button class="sub">에어컨</button></li>
+            <li><button class="sub">노트북</button></li>
+            <li><button class="sub">책상</button></li>
+            <li><button class="sub">핸드폰</button></li>
+            <li><button class="sub">원룸</button></li>
+            <li><button class="sub">이사짐 알바</button></li>
+            <li><button class="sub">동호회</button></li>
+             <li><button class="sub">친목</button></li>
+            <li><button class="sub">동네친구</button></li>
+        </ul>
+    </div>
+   
+    <!--카테고리-->
+    <div class="keyword">
+        <button class="key-box">의류</button>
+    <button class="key-box">가방</button>
+    <button class="key-box">액세서리</button>
+    <button class="key-box">스포츠</button>
+    <button class="key-box">가구</button>
+    <button class="key-box">디지털</button>
+    <button class="key-box">기타</button>   
+    </div>
+    <!--추천상품-->
+    <div class="abox-name">
+        <h2>추천상품</h2>
+    </div>
+    <div class="abox">
+        <div class="a"><img src="data:image/jpeg;base64,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">아이폰 16<br>1,499,000원</div>
+        <div class="a"><img src="https://cafe24.poxo.com/ec01/samsung6410/fYw07Q+e08011Z5Qzbz30/u3k7/4DgjGYumcxzkRSGxv+/OHj8UX0JQlp0s30/XcdFA5BHkZLgiOzaeB4tCNZg==/_/web/product/small/202412/d0fdde99d9c86cb06fbf135766b7e1af.jpg">갤럭시북4<br>2,200,000원</div>
+        <div class="a"><img src="https://item.elandrs.com/upload/prd/orgimg/364/2207039364_0000006.jpg?w=750&h=&q=100">니노 화이트 책상<br>138,000원</div>
+        <div class="a"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTthTSO12tmB6yUPwoxkvMbFOeZZZFYncagw&s">닌텐도 스위치2<br>330,000원</div>
+        <div class="a"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShoIKUGaWUE0g-fTXLE8TktrlUCRTUMMGI4g&s">배그 풀옵 데스크탑<br>1,399,000원</div>
+    </div>
+    
+</div>
+<!--푸터-->
+    <div class="poo">   
+        <div class="poo-a">
+            <li class="po-img"><img src="https://media.istockphoto.com/id/1189117812/ko/%EB%B2%A1%ED%84%B0/%EB%A7%8C%ED%99%94-%EC%8A%A4%ED%83%80%EC%9D%BC%EC%9D%98-%EC%9E%AC%EB%AF%B8%EC%9E%88%EB%8A%94-%EA%B0%90%EC%9E%90%EC%9D%98-%EB%B2%A1%ED%84%B0-%EA%B7%B8%EB%A6%BC.jpg?s=612x612&w=0&k=20&c=n0AcE6mCnke3uVuLtrJj1SRTFvB4jADDfV9RIWFfp5w="></li>
+            <li  class="po-font">감자마켓</li>
+        </div>
+        <div class="poo-b"><h4>회사</h4><br>회사 소개<br>감자페이<br>팀문화<br>서비스 소개<br>블로그<br>채용</h1><br><br><br><br><h4>문의</h4><br>IR<br>PR<br>고객센터</div>
+        <div class="poo-b"><h4>탐색</h4><br>중고거래<br>부동산<br>중고차<br>알바<br>동네업체<br>동네생활<br>모임<br>채팅하기</div>
+        <div class="poo-b"><h4>비즈니스</h4><br>감자 비즈니스<br>제휴 문의<br>광고 문의</div>
+        <div class="poo-b"><h4>karrot</h4><br>canada<br>united states<br>united kingdem<br>日本</div>
+
+
+    </div>
+</body>
+</html>

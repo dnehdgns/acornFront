@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+}
+        #header{
+            
+            width: 100% ;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: white;
+            border-bottom: 0.5px solid black;
+        }
+        .logo{
+            padding-left: 1rem;
+            font-size: 20px;
+            height: 10vh;
+            line-height: 10vh;
+        }
+        h1{
+            margin: 0;
+        }
+        .navi{
+            height: 10vh;
+            line-height: 10vh;
+            width: 70%;
+        }
+        .item{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            height: 10vh;
+            line-height: 10vh;
+            font-size: 0.8rem;
+            margin: 0;
+            position: relative;
+        }
+
+        .item1:hover .item1-hidden{
+            border: 1px solid black;
+            height: 15vh;
+            width: 100%;
+            display: block;
+            
+        }
+        .item1-hidden{
+            display: none;
+            position: absolute;
+            /* position: fixed; */
+            top: 100%; /* 부모 아래쪽에 표시 */
+            left: 0;
+            background-color: white;
+            z-index: 10;
+            width: max-content;
+            min-width: 200px; 
+        }
+        .check{
+            width: 15%;
+            display: flex;
+            height: 10vh;
+            line-height: 10vh;
+        }
+        .info{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            height: 10vh;
+            line-height: 10vh;
+            margin: 0;
+            margin: 0 auto;
+            width: 60%;
+        }
+        .info1{
+            margin: 0;
+        }
+        .icon-img1 {
+            height: 25%;
+            width: auto;   
+            margin: 0;
+           
+        }
+        .icon-img2 {
+            height: 27%;
+            width: auto;
+            margin: 0;
+      
+        }
+        .icon-img3 {
+            height: 25%;
+            width: auto;   
+            margin: 0;
+            
+        }
+        .icon-img4 {
+            height: 25%;
+            width: auto;   
+            margin: 0;
+            
+        }
+        .item1-lnb{
+            width: 100%;
+            list-style: none;
+            margin-bottom: 8px;
+            padding: 0;
+            
+        }
+        a{
+            text-decoration: none;
+            color:  black;
+        }
+        .move{
+            color: black ;
+            font-size: 0.8rem;
+            padding: 0 10px;
+            
+        }
+        .move:hover{
+            color:#000000af
+            ;
+        }
+        .lnb1{
+           
+            margin-bottom: 8px;
+            padding: 0;
+            margin: 0;
+            color: black;
+            font-size: 0.7rem;
+            height: 5vh;
+            padding-left: 50px;
+        }
+            
+        /* body */
+
+        .section{
+            width: 100%;
+            display:flex;
+            
+        }
+
+        .product-thums{
+            width: 50%;
+            border: 1px solid black;
+            height: 100vh;
+            background-image: url(./bag1.jpg);
+            background-position: center;
+            background-size: contain;
+        }    
+
+        
+
+        .contain2{
+            border: 1px solid black;
+            width: 50%;
+            height: 100vh;
+        }
+        .decs{
+            border:1px solid black;
+            padding: 2rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .lip{ 
+            font-size: 1.2rem;
+            font-weight: 400;
+
+        }
+        .type{
+            width: 3rem;
+            border: none;
+            outline: none;
+            text-align: center;
+        }
+    .total-price{
+        border:1px solid black;
+        justify-content: space-between;
+        display: flex;
+        padding: 1rem;
+    }
+    
+    .button{
+        display: block;
+
+    }
+    .btn{
+        border: 1px solid black;
+        width: 100%;
+
+    }
+    .buy{
+    
+    }
+    .imgarea{
+        width:100%;
+        height: 17vh;
+        border: 1px solid black;
+        justify-content: left;
+        display: flex;
+        align-items: center;
+        padding-left: 5%;
+        box-sizing: border-box;
+        gap: 5%;
+
+    }
+    .img1{
+        width: 15%;
+        height: 15vh;
+        background-image: url(bag1-2.jpg);
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .img2{
+        width: 10%;
+        height: 10vh;
+        
+        background-image: url(bag1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .img3{
+        width: 15%;
+        height: 15vh;
+        background-image: url(bag1-2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .total-qty{
+        font-size: .8rem;
+        
+    }
+    .button{
+        width: 100%;
+        border: 1px solid black;
+        box-sizing: border-box;
+        text-align: center;
+        /* margin: 0; */
+    }
+    .btn{
+        border: none;
+        
+        font-size: 1rem;
+        color: black;
+        text-decoration: none;
+        
+    }
+    hr{
+    }
+    .descript-wrap{
+        width: auto;
+        text-align: center;
+        list-style: none;
+
+    }
+    .descript1{
+        font-size: 1rem;
+        border: 1px solid black;
+    }
+   .guide1{
+
+    font-size: 1rem;
+        border: 1px solid black;
+   }   
+   .descript1:hover .hidden{
+        display: block;
+   }
+   .hidden{
+    display: none;
+   }
+
+   .guide1:hover .hidden{
+        display: block;
+   }
+   .body {
+    width: 100%;
+    height: auto;
+    display: flex;
+   }
+
+          /* 푸터 */
+        .footer {
+  width: 100%;
+  border-top: 1px solid black;
+  font-size: 0.8rem;
+  margin-top: 50px;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 20px 10px;
+  text-align: left;
+}
+
+.footer-col {
+  flex: 1;
+  padding: 10px;
+  border-right: 1px solid black;
+  box-sizing: border-box;
+}
+
+.footer-col:last-child {
+  border-right: none;
+  text-align: center;
+}
+
+.footer-col h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-col p {
+  margin: 4px 0;
+}
+
+.footer-col.logo h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.footer-bottom {
+  padding: 15px 20px;
+  font-size: 0.7rem;
+  color: #888;
+  line-height: 1.5;
+}
+ 
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header id="header">
+        <div class="logo"><a href="http://127.0.0.1:5500/test/home.html">
+            <h1>OSOI</h1></a>
+        </div>
+        <div class="navi">
+            <div class="menu">
+                <ul class="item">
+                    <li class="item1">25SU COLLECTION
+                        <div class="item1-hidden">
+                            <ul class="item1-lnb">
+                                <li class="item1-1"><a href="http://127.0.0.1:5500/test/home.html">
+                                    <p class="lnb1">NEW IN</p>
+                                </a></li>
+                                <li class="item1-2"><a href="http://127.0.0.1:5500/test/home.html">
+                                    <p class="lnb1">COLLECTION</p>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item2">SHOP</li>
+                    <li class="item3">INSIDE OSOI</li>
+                    <li class="item4">COSTOMER SERVICE</li>
+                </ul>
+            </div>
+        </div>
+        <div class="check">
+            <ul class="info">
+                <li class="info1">
+                    <a href="#" class="leng"><img src="./지구본.png" class="icon-img1"></a>
+                </li>
+                <li class="info2">
+                    <a href="#" class="mypage"><img src="./사람.png" class="icon-img2"></a>
+                </li>
+                <li class="info3">
+                    <a href="#" class="leng"><img src="./돋보기.png" class="icon-img3"></a>
+                </li>
+                <li class="info4">
+                    <a href="#" class="leng"><img src="./장바구니.png" class="icon-img4"></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+
+            <!-- 바디 -->
+  <div class="body">           
+   <div class="empty"></div>
+    <div class="contain2">
+        <div class="decs">
+            <p class="lip">LIP TOTE BAG [BELL WHITE]</p>
+            <p class="lip">KRW 409,000</p>
+
+
+</p>
+        </div>
+        <div class="imgarea">
+            <div class="img1"></div>
+            <div class="img2"></div>
+            <div class="img3"></div>
+        </div>
+        <div class="total-price">
+            <p class="total-qty">total(qty) :
+KRW 409,000 (1개)</p>
+            <div class="qty">
+                -<input type="text" value="1" class="type">+
+            </div>
+        </div>
+        <div class="button">
+        <div class="buy"><a href=""class="btn">BUY NOW</a></div>
+        <hr>
+        <div class="add"><a href=""class="btn">ADD TO BAG</a> </div>
+        <hr>
+        <div class="wishlist"> <a href ="" class="btn">WISHLIST </a></div>
+        </div>
+        <div class="descript-wrap">
+            <ul>
+                <li class="descript1">DESCRIPT ⬇
+                    
+                        <p class="hidden">매끈한 LIP 라인을 연상케 하는 바스켓 형태의 핸드 메이드 토트백입니다.<br>
+두 가지 패턴의 섬세한 위빙 기법을 사용하여 부드럽고 탄탄한 조직감을 구현했습니다.<br>
+LIP 라인을 따라 장식된 방울 디테일이 시원하고 경쾌한 분위기를 자아냅니다.<br>
+가볍게 들 수 있는 컴팩트한 사이즈로, 핸드 크래프트만의 내추럴한 무드를 느낄 수 있습니다.<br>
+<br>
+■ HANDMADE NOTICE<br>
+*직조하는 위버에 따라 모서리 위빙, 테두리 마감, 핸들 두께, 좌우 대칭, BELL/RIBBON의 위치 등이 상이할 수 있습니다.<br>
+이는 불량 사유에 해당하지 않는 점 참고 부탁드립니다.<br>
+<br>
+*불규칙한 컬러 톤, 투 톤 현상, 가루 날림 등은 핸드 메이드 위빙 과정상 발생할 수 있는 특징으로,<br>
+이는 불량 사유에 해당하지 않는 점 참고 부탁드립니다.<br>
+<br>
+*해외 제작 상품으로, 국내 수입 과정에서 약간의 가죽 눌림과 구김이 발생할 수 있습니다.<br>
+                    
+                </li>
+                <li class="guide1"> GUIED ⬇
+                    <div class="guide1-1">
+                        <p class="hidden">- 천연 가죽 특성상 약간의 스크래치, 튼 살, 주름, 반점, 모공, 힘줄 등이 있을 수 있습니다.<br>
+<br>
+- 제작 과정 중 약간의 흠집이나 주름, 본드 자국, 모니터 해상도에 따른 색상, 질감의 차이가 있으니 구매에 참고 부탁드립니다.<br>
+<br>
+- 사이즈 교환은 1회에 한하여 가능하며, 고객님의 배송비 부담 및 추가 제작 기간이 발생하오니 신중한 구매 부탁드립니다.<br>
+<br>
+- 제품 케어, 교환/반품 관련 자세한 내용은 CUSTOMER SERVICE 공지사항란에서 확인 부탁드립니다.
+</p>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+
+    </div>
+    <div class="thuumb img">
+        
+    </div>
+ </div>
+ <!-- 푸터 -->
+    <footer class="footer">
+  <div class="footer-box">
+    <div class="footer-col">
+      <h4>LEGAL</h4>
+      <p>PRIVACY POLICY</p>
+      <p>AGREEMENT</p>
+    </div>
+    <div class="footer-col">
+      <h4>SOCIAL MEDIA</h4>
+      <p>INSTAGRAM</p>
+      <p>KAKAOTALK</p>
+      <p>TIKTOK</p>
+    </div>
+    <div class="footer-col">
+      <h4>CUSTOMER SERVICE</h4>
+      <p>09:30 – 17:30</p>
+      <p>osoi_cs@osoi.co.kr</p>
+    </div>
+    <div class="footer-col">
+      <h4>COMPANY</h4>
+      <p>STOCKIST</p>
+      <p>STORE</p>
+    </div>
+    <div class="footer-col logo">
+      <h2>©2025 OSOI</h2>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>
+      주식회사 오소이 CEO. 강희진 BUSINESS NO. [402-87-02980] MAIL ORDER LICENSE. 제2024-서울용산-0389호
+      TEL. 02-6211-9481 ADDRESS. 04349 서울 용산구 이태원로 227 4층, 401호  
+      CPO. HEEJIN KANG(OSOI_KANG@OSOI.CO.KR)  
+      HOSTING PROVIDER. CAFE24
+    </p>
+  </div>
+</footer>
+    
+</body>
+</html>
+</body>
+</html>
