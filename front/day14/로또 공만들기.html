@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid gray;
+            margin-top: 10px;
+            margin-left: 10px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+    <script>
+        function createLotto(){
+            const lottoNumbers = getLottoNum();
+            const parent = document.getElementById("wrap");
+            parent.innerHTML="";
+            for(i=0; i<lottoNumbers.length; i++){
+                const ball = document.createElement("div")
+                ball.classList.add("ball");
+                ball.textContent = lottoNumbers[i];
+                ball.style.backgroundColor = getColor()
+                parent.appendChild(ball);
+            }
+        }
+
+        function getLottoNum(){
+            const lottoNum = [];
+            while(lottoNum.length<6){     
+                const random = Math.floor(Math.random()*45 + 1)
+                if(!lottoNum.includes(random)){
+                    lottoNum.push(random)
+                }
+            }
+            return lottoNum;
+        }
+
+        function getColor(){
+            let r = Math.floor(Math.random()*256);
+            let g = Math.floor(Math.random()*256);
+            let b = Math.floor(Math.random()*256);
+
+            let rgbColor=`rgb(${r}, ${g}, ${b})`;
+            return rgbColor;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="createLotto()">로또만들기</button>
+    <div id="wrap" style="display: flex;"></div>
+</body>
+</html>

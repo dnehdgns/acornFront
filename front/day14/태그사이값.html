@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ex1"></div>
+
+    <script>
+        let item = {
+            name : "돌김자반",
+            price : "15000"
+        }
+        const ex1 = document.getElementById("ex1")
+
+        ex1.innerHTML = `<span>${item.name}</span> <span>${item.price}</span> <button>삭제하기</button>`
+    </script>
+</body>
+</html>

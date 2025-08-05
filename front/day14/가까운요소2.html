@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function getContent(e){
+            const btn = e.target;
+            const item = btn.closest(".item");
+            const obj = item.querySelector(".aa");
+            alert(obj.value);
+            obj.value = null;
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="item">
+        <div> <input type="text" class="aa"></div>
+        <div> <button onclick="getContent(event)">클릭</button></div>
+    </div>
+    <div class="item">
+        <div> <input type="text" class="aa"></div>
+        <div> <button onclick="getContent(event)">클릭</button></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            height: 100px;
+            background-color: aqua;
+
+            position: relative;
+        }
+
+        nav {
+            height: 60px;
+            background-color: blue;
+            padding: 10px;
+
+            box-sizing: border-box;
+        }
+
+        section {
+            height: 600px;
+            background-color: yellow;
+        }
+
+        /**/
+        footer {
+            height: 100px;
+            background-color: aqua;
+
+            display: flex;
+        }
+
+        footer .item {
+            width: 33.3%;
+            border: 1px solid black;
+        }
+
+
+        header .title {
+
+            position: absolute;
+            top: 20px;
+            left: 30px;
+
+        }
+
+        header .search {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        nav .menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        nav .menu li {
+            padding-right: 10px;
+        }
+
+
+        .product-list {
+            list-style: none;
+            display: flex;
+            border: 1px solid black;
+
+            justify-content: center;
+            margin: 0;
+
+
+        }
+
+        .product-item {
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+
+        }
+
+        .product-item img {
+            width: 300px;
+            height: 200px;
+        }
+
+
+        /* 검색바 css*/
+
+       .search{
+            border: 1px solid black;
+            width: 210px;
+            display: flex;
+             
+        }
+
+         .search input{
+            border: none;
+            outline: none;
+         }
+
+        .btn{
+            width: 40px;
+            height: 40px;
+            background-color: blue;               
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <!--타이틀 이미지 -->
+        <img src="" alt="타이틀 이미지" class="title">
+
+        <!--검색바-->
+       
+        <div class="search">
+            <input type="text">
+            <div class="btn">검</div>
+        </div>
+
+    </header>
+    <nav>
+        <ul class="menu">
+            <li>로그인</li>
+            <li>로그아웃</li>
+            <li>홈으로 </li>
+        </ul>
+    </nav>
+    <section>
+        <ul class="product-list">
+            <li class="product-item">
+                <img src="https://image2.lotteimall.com/goods/53/71/89/3043897153_14.jpg/dims/resizemc/640x360/optimize"
+                    alt="식품이미지">
+                <p>상품이름</p>
+                <p>1200원</p>
+            </li>
+            <li class="product-item">
+                <img src="https://image2.lotteimall.com/goods/53/71/89/3043897153_14.jpg/dims/resizemc/640x360/optimize"
+                    alt="식품이미지">
+                <p>상품이름</p>
+                <p>1200원</p>
+            </li>
+            <li class="product-item">
+                <img src="https://image2.lotteimall.com/goods/53/71/89/3043897153_14.jpg/dims/resizemc/640x360/optimize"
+                    alt="식품이미지">
+                <p>상품이름</p>
+                <p>1200원</p>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </footer>
+
+</body>
+
+</html>

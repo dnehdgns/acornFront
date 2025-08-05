@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            position: relative;
+        }
+        header .title {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        header .search {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            border: 1px solid black;
+            width: 230px;
+            display: flex;
+        }
+        header .btn {
+            width: 40px;
+            height: 40px;
+            background-color: antiquewhite;
+            background-image: url();
+        }
+        nav {
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+            box-sizing: border-box;
+        }
+        nav .menu {
+            display: flex;
+            list-style: none;
+            margin-top: -5px;
+        }
+        nav .menu li {
+            margin-right: 15px;
+        }
+        section {
+            height: 600px;
+        }
+        section .login-wrap {
+            border: 1px solid black;
+            width: 350px;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        section .login-img{
+            width: 250px;
+            height: 250px;
+            border: 1px solid black;
+            margin: 0 auto;
+
+            background-image: url();
+            background-size: cover;
+            background-position: center;
+        }
+        section .login-info {
+            width: 300px;
+            margin: 0 auto;
+        }
+        section .login-info input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        section .login-info button{
+            width: 100%;
+            padding: 5px;
+            border: none;
+            margin-top: 15px;
+        }
+        footer {
+            height: 60px;
+            background-color : rgb(233 , 239 , 239);
+            display: flex;
+        }
+        footer .item {
+            width: 33%;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function login() {
+            const log = document.loginForm;
+            const userId = log.userId;
+            const userPw = log.userPw;
+
+            if(userId.value == ""){
+                alert("아이디를 입력해주세요")
+                userId.focus();
+            } else if(userPw.value == ""){
+                alert("비밀번호를 입력해주세요")
+                userPw.focus()
+            } else {
+                alert("로그인 되었습니다")
+                userId.value = ""
+                userPw.value = ""
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="" alt="타이틀 이미지" class="title">
+        <div class="search">
+            <input type="text">
+            <div class="btn">검</div>
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li>로그인</li>
+            <li>로그아웃</li>
+            <li>홈으로</li>
+        </ul>
+    </nav>
+    <section>
+        <div class="login-wrap">
+            <div class="login-img"></div>
+            <form name="loginForm" action="" method="get">
+                <div class="login-info">
+                    <input type="text" name="userId">
+                    <input type="password" name="userPw">
+                    <button type="button" onclick="login()">로그인</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </footer>
+</body>
+</html>

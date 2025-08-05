@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addItem(){
+            const item = document.getElementById("item");
+            const itemlist = document.getElementById("item-list");
+            const li = document.createElement("li");
+
+            li.innerHTML = `<span>${item.value}</span> <button onclick="del(this)">삭제하기</button>`
+            itemlist.appendChild(li)
+        }
+
+        function del(me){
+            me.closest("li").remove()
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="item">
+
+    <button onclick="addItem()">추가하기</button>
+
+    <ul id="item-list">
+
+    </ul>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">네이버로 이동</button>
+    <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", () => {
+            // window.location.href = "https://www.naver.com"
+            window.open("https://www.naver.com", "newWin", "left=0, top=0, width=300px, height=300px")
+        })
+    </script>
+</body>
+</html>

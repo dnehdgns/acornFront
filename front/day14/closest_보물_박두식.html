@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap{
+            width: 900px;
+            height: 600px;
+            border: 1px  solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .title{
+            width: 500px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .content_wrap{
+            width: 700px;
+            height: 200px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding-right: 50px;
+        }
+
+        .item_1{
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 120px;
+        }
+
+        .item_2{
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 120px;
+        }
+
+        .item_button{
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            position: absolute;
+            right: 250px;
+        }
+        
+
+
+    </style>
+    </style>
+</head>
+<body>
+    <!--전체 영역-->
+    <div class="wrap">
+        <div class="title">closest를 사용하여 버튼클릭시 보물의 내용 가져오기</div>
+        <div class="content_wrap">
+            <div class="item_1">
+                <p class="item">금 100톤</p>
+            </div>
+            <button onclick="item_get(event)" class="item_button">클릭</button>
+        </div>
+        <div class="content_wrap">
+            <div class="item_1">
+                <p class="item">다이아몬드 10캐럿</p>
+            </div>
+            <button onclick="item_get(event)" class="item_button">클릭</button>
+        </div>
+        
+    </div>
+
+    <script>
+        function item_get(event){ //매개변수
+            const btn = event.target; //이벤트를 발생시킨 대상(버튼)
+            const item = btn.closest(".content_wrap"); //버튼의 부모요소를 선택
+            console.log(item);
+            const content = item.querySelector(".item")//.content_wrap내에 포함된 클래스 .item을 선택
+            console.log(content);
+
+
+            const pTag=document.createElement("p");//p태그를 생성하는 변수
+            pTag.innerHTML=content.innerHTML;//새로 생성된 p태그 = 클래스 <p class ="item"></p>
+            item.appendChild(pTag);
+            content.remove();
+        }
+
+            
+
+    </script>
+</body>
+</html>

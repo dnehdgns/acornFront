@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addPTag(){
+            const tag = document.getElementById("wrap");
+            const pTag = document.createElement("p");
+
+            pTag.innerHTML = "새로생긴 p"
+            pTag.style.width = "200px"
+            pTag.style.height = "200px"
+            pTag.style.backgroundColor = "red"
+            pTag.style.display = "block"
+
+            tag.appendChild(pTag);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addPTag()">p태그 생성</button>
+    <div id="wrap"></div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            margin-top: 100px;
+        }
+
+        .gallery{
+            height: 50px;
+           
+        }
+
+        .gallery  > div{
+            display: none;
+        }
+    </style>
+
+    <script>
+
+        let msg = [];
+
+
+        let i = 0;  //배열의 index
+        function nextMessage() {
+            let gallery = document.querySelector(".gallery");
+            gallery.innerHTML = msg[i];
+            i++;
+            if (i >= msg.length) {
+                i = 0;
+            }
+
+
+            gallery.animate( 
+            [
+                { transform: 'translateY(100%)' },
+                { transform: 'translateY(0)' }
+            ], 
+            
+            {
+                duration: 1000,
+                easing: 'ease'
+            }
+           );
+
+
+
+
+        }
+
+
+        //문서의 요소에서 갤러리 내용을 가져오기 (배열에 추가하기)
+        function init() {
+
+            let divs = document.querySelectorAll(".gallery > div");
+            for (let i = 0; i < divs.length; i++) {
+                msg.push(divs[i].textContent);
+            } 
+
+
+              
+        }
+
+
+    </script>
+</head>
+
+<body onload="init()">
+
+
+    <div class="wrap">
+        <div class="gallery">
+            <div> 곧 프론트 프로젝트 곧 시작 합니다!! </div>
+            <div>팀 끼리 재미있게 해 줘요 ^ "</div>
+            <div> 8월 15일 부터 5일간 휴일이당 !! ^^ </div>
+            <div>for , if, 1차원배열, 함수 연습 연습</div>
+            <div>함수가 별거냐 ^^</div>
+            <div>배열이 별거냐 ^^</div>
+            <div>객체가 별거냐 ^^</div>
+            <div>별거 아닌게 모여 별거가 됩니다 ^^ </div>
+        </div>
+    </div>
+
+    <button onclick="nextMessage()"> 다음</button>
+
+
+</body>
+
+</html>

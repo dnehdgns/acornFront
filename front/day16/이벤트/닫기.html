@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">네이버로 이동</button>
+    <button id="btnClose">창닫기</button>
+    <script>
+        const btn = document.getElementById("btn");
+        const btnClose = document.getElementById("btnClose")
+        let newWindow;
+        btn.addEventListener("click", () => {
+            newWindow = window.open("https://www.naver.com", "newWin", "left=0, top=0, width=300px, height=300px")
+        })
+        btnClose.addEventListener("click", () => {
+            newWindow.close()
+        })
+    </script>
+</body>
+</html>

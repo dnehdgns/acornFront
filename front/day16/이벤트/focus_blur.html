@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            transition: 1s;
+        }
+    </style>
+    <script>
+        function onFocus(input) {
+            input.style.width = "300px";
+        }
+
+        function onBlur(input) {
+            input.style.width = "";
+        }
+    </script>
+</head>
+<body>
+    <h2>focus, blur 이벤트처리</h2>
+    <p>focus : 해당 요소에 포커스가 왔을때 반응</p>
+    <p>blur : 해당 요소에 포커스가 풀렸을때 반응 </p>
+    <input type="text" onfocus="onFocus(this)" onblur="onBlur(this)">
+</body>
+</html>

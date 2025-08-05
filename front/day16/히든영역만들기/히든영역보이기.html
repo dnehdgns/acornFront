@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        li{
+            text-align: center;
+            position: relative;
+            border: 1px solid black;
+            width: 400px;
+        }
+        li > img {
+            width: 300px;
+            height: 200px;
+        }
+        li > p {
+            text-align: center;
+        }
+        li .hidden-area {
+            width: 100%;
+            height: 100%;
+            background-color: aliceblue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: 1s;
+        } 
+
+        li .hidden-area:hover {
+            opacity: 1;
+        }
+
+        .hidden-area .title {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <img src="https://cdn.inflearn.com/public/courses/328592/cover/b8957940-b416-4f31-8ae1-1cd2c5b29f3a/HTML-CSS--IFL.png" alt="">
+            <p>얄코 html 강좌</p>
+            
+            <div class="hidden-area">
+                <p class="title">html/css/javascript 강좌</p>
+                <p>얄코 강좌</p>
+                <p>가격 : 44,000</p>
+                <button>구매</button>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

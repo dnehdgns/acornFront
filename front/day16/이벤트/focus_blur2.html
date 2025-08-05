@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #search {
+            transition: 1s;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", () => {
+            const search = document.getElementById("search")
+            search.addEventListener("focus", () => {
+                search.style.width = "300px"
+            })
+            search.addEventListener("blur", () => {
+                search.style.width = ""
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="검색중..." id="search">
+</body>
+</html>

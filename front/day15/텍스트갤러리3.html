@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .wrap{
+            height: 100px;
+        }
+
+        .gallery{
+            height: 50px;
+        }
+
+    </style>
+    <script>
+           let message = [
+            " 곧  프론트 프로젝트 곧 시작 합니다!! ",
+            " 팀 끼리 재미있게 해 줘요 ^  ",
+            " 8월 15일 부터 5일간 휴일이당   신나 신나 !! ^^ ",            
+             "for , if, 1차원배열, 함수 연습 연습", 
+             "for가 별거나 if가 별거나^^", 
+             "함수가 별거냐 ^^", 
+             "배열이 별거냐 ^^ " ,
+             "객체가 별거냐 ^^"  ,
+             "별거 아닌게 모여 별거가 됩니다 ^^"];
+
+            let i=0;  // 배열의 인덱스        
+            function next(){              
+                const gallery  = document.querySelector(".gallery");
+                gallery.textContent=message[i];
+                i= i+1;
+                if( i >=message.length){   
+                    i=0;
+            }
+            gallery.animate( 
+            [
+                { transform: 'translateX(50%)' },   // 아래에서 시작  
+                { transform: 'translateX(0)' }       // 원래위치로 
+            ], 
+            
+            {
+                duration: 1000
+               
+            }
+           );
+
+            }
+
+
+    
+     function init(){
+        // alert("init");
+        next();
+        setInterval( next  , 3000);   //
+     }
+
+    </script>
+</head>
+<body onload="init()">
+
+    <div class="wrap">
+        <div class="gallery">
+            갤러리 내용
+        </div>
+    </div> 
+
+    
+
+</body>
+</html>

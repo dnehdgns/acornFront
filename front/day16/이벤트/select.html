@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="email">
+        <option value="">선택하시오</option>
+        <option value="google.com">google.com</option>
+        <option value="naver.com">naver.com</option>
+
+        <h4>이메일 정보</h4>
+        <input type="text" id="info">
+    </select>
+    <script>
+        const email = document.getElementById("email")
+        email.addEventListener("change" , () => {
+            const selectedIndex = email.selectedIndex;
+            const selectedValue = email.options[selectedIndex].value;
+            const info = document.getElementById("info")
+            info.value = selectedValue
+        })
+    </script>
+</body>
+</html>

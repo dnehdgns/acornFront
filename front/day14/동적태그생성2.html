@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            color: white;
+            padding : 10px;
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function addSpan() {
+            const spanTag = document.createElement("span")
+            const wrap = document.getElementById("wrap");
+
+            spanTag.classList.add("highlight")
+            wrap.appendChild(spanTag)
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addSpan()">Span 태그 추가</button>
+    <div id="wrap"></div>
+</body>
+</html>

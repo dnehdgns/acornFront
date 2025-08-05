@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getLottoNum1(){
+            const lottoNum = [];
+            while(lottoNum.length<6){     
+                const random = Math.floor(Math.random()*45 + 1)
+                if(!lottoNum.includes(random)){
+                    lottoNum.push(random)
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="getLottoNum1()">번호 뽑기</button>
+</body>
+</html>

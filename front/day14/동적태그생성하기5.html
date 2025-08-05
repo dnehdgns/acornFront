@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function addButton(){
+            console.log("djdfkdkf");
+
+            //
+            const buttonTag  = document.createElement("button");
+            buttonTag.textContent ="클릭하시오";
+
+            //버튼태그에 이벤트처리하기
+            buttonTag.addEventListener("click" ,function(){
+                alert("hi~~~");
+            } );
+
+            //
+            const wrap  = document.getElementById("wrap");
+
+            //
+            wrap.appendChild(buttonTag);
+
+
+        }
+    </script>
+</head>
+<body>
+    
+    <button onclick="addButton()"> 버튼 태그  생성</button>
+    <!--부모영역으로 정하기-->
+    <div id="wrap">  </div>
+</body>
+</html>

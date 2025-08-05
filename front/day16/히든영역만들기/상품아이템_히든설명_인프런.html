@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;            
+        }
+
+        li {
+            width: 300px;
+            height: 350px;
+            padding: 10px;
+            border: 1px solid black;
+            position: relative;
+            /* overflow: hidden; */
+           
+        }
+
+        /* 이미지 */
+        li img {
+            width: 300px;
+            height:200px;          
+        }
+
+        
+        /* 히든 영역 */
+        .hidden_wrap {
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;        
+            border: 1px solid black;
+            position: absolute;             
+            top:0;
+            left:0;            
+            transition:  0.5s ;     /* transition: all  0.5s ; *//* transition: transform 0.5s ease;*/
+            opacity: 0 ;
+        
+
+           
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
+
+            font-size: 12px;
+            color: rgb(43, 28, 2);
+             
+
+        }
+
+        li:hover .hidden_wrap {
+
+            opacity: 1;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+
+    히든영역 만드는 법 
+    
+         1. 두 개의 박스 영역을 똑같이 겹치게 하다.  position:relative  (부모), positon:absolute 사용 (자식) 
+         2. 히든영역의 opacity:0 안보이게 한다 
+         3. 마우스호버시 opacity:1  또는  0.8 로 설정한다    
+   
+-->
+
+    <ul>
+        <li>
+           <img src="https://cdn.inflearn.com/public/courses/328592/cover/b8957940-b416-4f31-8ae1-1cd2c5b29f3a/HTML-CSS--IFL.png?f=avif">
+
+           <div >
+            <p  >제대로 파는 HTML CSS - by 얄코(Yalco)</p>
+            <p  >얄팍한 코딩사전</p></div>
+
+
+             <!-- 히든 영역 -->
+            <div class="hidden_wrap"> 
+                <p>😘 html/css/javascript </p>             
+                <p>얄코강좌</p>
+                <p>html/css/javascript</p>
+                <p>가격: 44,000</p>
+                <button>구매</button>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

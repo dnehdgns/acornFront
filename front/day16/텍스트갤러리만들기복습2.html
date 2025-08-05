@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let index = 0;
+        let textBox = [];
+        function text(){
+            const galleryText = document.querySelectorAll(".gallery > div")
+            galleryText.forEach(item => { textBox.push(item.textContent) })
+            const gallery = document.querySelector(".gallery");
+            gallery.textContent = textBox[0]
+        }
+        function next(){
+            index++;
+            if(index > textBox.length-1){ index = 0; } 
+            const gallery = document.querySelector(".gallery");
+            gallery.textContent = textBox[index];
+        }
+    </script>
+</head>
+<body onload="text()">
+    <div class="gallery-wrap">
+        <div class="gallery">
+            <div>11</div>
+            <div>22</div>
+            <div>33</div>
+        </div>
+    </div>
+    <button onclick="next()">다음</button>
+</body>
+</html>

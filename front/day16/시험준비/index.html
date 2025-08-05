@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            position: relative;
+        }
+        header .title {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+
+        header .search {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            border: 1px solid black;
+            width: 230px;
+            display: flex;
+        }
+        header .btn {
+            width: 40px;
+            height: 40px;
+            background-color: antiquewhite;
+            background-image: url();
+        }
+        nav {
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+            box-sizing: border-box;
+        }
+        nav .menu {
+            display: flex;
+            list-style: none;
+            margin-top: -5px;
+        }
+        nav .menu li {
+            margin-right: 15px;
+        }
+        section {
+            height: 600px;
+        }
+        section ul {
+            display: flex;
+            list-style: none;
+            border: 1px solid black;
+            justify-content: center;
+        }
+        section ul .product-item {
+            border: 1px solid black;
+            width: 300px;
+            height: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            height: 60px;
+            background-color : rgb(233 , 239 , 239);
+            display: flex;
+        }
+        footer .item {
+            width: 33%;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+    <script></script>
+</head>
+<body>
+    <header>
+        <img src="" alt="타이틀 이미지" class="title">
+        <div class="search">
+            <input type="text">
+            <div class="btn">검</div>
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li>로그인</li>
+            <li>로그아웃</li>
+            <li>홈으로</li>
+        </ul>
+    </nav>
+    <section>
+        <ul>
+            <li class="product-item">
+                <img src="https://image2.lotteimall.com/goods/53/71/89/3043897153_14.jpg/dims/resizemc/300x300/optimize" alt="">
+                <p>상품이름</p>
+                <p>1000원</p>
+            </li>
+            <li class="product-item">
+                <img src="https://image2.lotteimall.com/goods/53/71/89/3043897153_14.jpg/dims/resizemc/300x300/optimize" alt="">
+                <p>상품이름</p>
+                <p>1000원</p>
+            </li>
+            <li class="product-item">
+                <img src="https://image2.lotteimall.com/goods/53/71/89/3043897153_14.jpg/dims/resizemc/300x300/optimize" alt="">
+                <p>상품이름</p>
+                <p>1000원</p>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </footer>
+</body>
+</html>
